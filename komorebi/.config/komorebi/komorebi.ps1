@@ -14,8 +14,8 @@ komorebic cross-monitor-move-behaviour insert
 # Enable hot reloading of changes to this file
 komorebic watch-configuration enable
 
-# Create named workspaces I-V on monitor 0
-komorebic ensure-named-workspaces 0 I II III IV V
+# Create named workspaces I-X on monitor 0
+komorebic ensure-named-workspaces 0 I II III IV V VI VII VIII IX X
 # You can do the same thing for secondary monitors too
 # komorebic ensure-named-workspaces 1 A B C D E F
 
@@ -24,14 +24,34 @@ komorebic named-workspace-layout I bsp
 
 # Set the gaps around the edge of the screen for a workspace
 komorebic named-workspace-padding I 0
+komorebic named-workspace-padding II 0
+komorebic named-workspace-padding III 0
+komorebic named-workspace-padding IV 0
+komorebic named-workspace-padding V 0
+komorebic named-workspace-padding VI 0
+komorebic named-workspace-padding VII 0
+komorebic named-workspace-padding VIII 0
+komorebic named-workspace-padding IX 0
+komorebic named-workspace-padding X 0
+
 # Set the gaps between the containers for a workspace
-komorebic named-workspace-container-padding I 10
+komorebic named-workspace-container-padding I II III IV V 0
+komorebic named-workspace-container-padding I 0
+komorebic named-workspace-container-padding II 0
+komorebic named-workspace-container-padding III 0
+komorebic named-workspace-container-padding IV 0
+komorebic named-workspace-container-padding V 0
+komorebic named-workspace-container-padding VI 0
+komorebic named-workspace-container-padding VII 0
+komorebic named-workspace-container-padding VIII 0
+komorebic named-workspace-container-padding IX 0
+komorebic named-workspace-container-padding X 0
 
 # You can assign specific apps to named workspaces
 komorebic named-workspace-rule exe "Spotify.exe" I
 
 # Disable mouse follow focus
-komorebic mouse-follows-focus disable
+komorebic mouse-follows-focus enable
 
 # Configure the invisible border dimensions
 komorebic invisible-borders 7 0 14 7

@@ -49,6 +49,8 @@ komorebic named-workspace-container-padding X 0
 
 # You can assign specific apps to named workspaces
 komorebic named-workspace-rule exe "Spotify.exe" I
+komorebic named-workspace-rule exe "Teams.exe" IV
+komorebic named-workspace-rule exe "Outlook.exe" IV
 
 # Disable mouse follow focus
 komorebic mouse-follows-focus enable

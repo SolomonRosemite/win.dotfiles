@@ -16,6 +16,8 @@
 [This](https://github.com/LGUG2Z/komorebi#getting-started) can be followed to
 install komorebi.
 
+Also make sure to set the [Home dir](https://github.com/LGUG2Z/komorebi/tree/096729c2bda97fb9bcd38969ef7fb37d66471204#common-first-time-tips)
+
 ### Potentially useful resources
 
 #### Disable super (Win) key shortcuts

@@ -35,6 +35,7 @@ komorebic named-workspace-padding IX 0
 komorebic named-workspace-padding X 0
 
 # Set the gaps between the containers for a workspace
+# komorebic named-workspace-container-padding I II III IV V VI VII VIII IX X 0
 komorebic named-workspace-container-padding I II III IV V 0
 komorebic named-workspace-container-padding I 0
 komorebic named-workspace-container-padding II 0
@@ -46,6 +47,50 @@ komorebic named-workspace-container-padding VII 0
 komorebic named-workspace-container-padding VIII 0
 komorebic named-workspace-container-padding IX 0
 komorebic named-workspace-container-padding X 0
+
+komorebic container-padding 1 0 0
+komorebic container-padding 1 1 0
+komorebic container-padding 1 2 0
+komorebic container-padding 1 3 0
+komorebic container-padding 1 4 0
+komorebic container-padding 1 5 0
+komorebic container-padding 1 6 0
+komorebic container-padding 1 7 0
+komorebic container-padding 1 8 0
+komorebic container-padding 1 9 0
+
+komorebic container-padding 2 0 0
+komorebic container-padding 2 1 0
+komorebic container-padding 2 2 0
+komorebic container-padding 2 3 0
+komorebic container-padding 2 4 0
+komorebic container-padding 2 5 0
+komorebic container-padding 2 6 0
+komorebic container-padding 2 7 0
+komorebic container-padding 2 8 0
+komorebic container-padding 2 9 0
+
+komorebic workspace-padding 1 0 0
+komorebic workspace-padding 1 1 0
+komorebic workspace-padding 1 2 0
+komorebic workspace-padding 1 3 0
+komorebic workspace-padding 1 4 0
+komorebic workspace-padding 1 5 0
+komorebic workspace-padding 1 6 0
+komorebic workspace-padding 1 7 0
+komorebic workspace-padding 1 8 0
+komorebic workspace-padding 1 9 0
+
+komorebic workspace-padding 2 0 0
+komorebic workspace-padding 2 1 0
+komorebic workspace-padding 2 2 0
+komorebic workspace-padding 2 3 0
+komorebic workspace-padding 2 4 0
+komorebic workspace-padding 2 5 0
+komorebic workspace-padding 2 6 0
+komorebic workspace-padding 2 7 0
+komorebic workspace-padding 2 8 0
+komorebic workspace-padding 2 9 0
 
 # You can assign specific apps to named workspaces
 komorebic named-workspace-rule exe "Spotify.exe" I

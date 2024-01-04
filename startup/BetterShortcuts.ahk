@@ -79,22 +79,22 @@ Return
     return
 
 #IfWinActive ahk_exe chrome.exe
-^k::
+^+k::
     Send, {WheelUp 7} ; Scroll up
     return
 
 #IfWinActive ahk_exe chrome.exe
-^j::
+^+j::
     Send, {WheelDown 7} ; Scroll down
     return
 
 #IfWinActive ahk_exe chrome.exe
-^+k::
+^k::
     Send, {WheelUp 3} ; Scroll up a little
     return
 
 #IfWinActive ahk_exe chrome.exe
-^+j::
+^j::
     Send, {WheelDown 3} ; Scroll down a little
     return
 

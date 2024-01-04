@@ -3,31 +3,31 @@ Send {LShift}{LCtrl}{F12}
 return
 
 ^Capslock::
-Send ^{├╝}
+Send ^{ü}
 return
 
 <+Capslock::
-Send ^{├╝}
+Send ^{ü}
 return
 
 <!Capslock::
-Send ^{├╝}
+Send ^{ü}
 return
 
 <!<+Capslock::
-Send ^{├╝}
+Send ^{ü}
 return
 
 ^<!<+Capslock::
-Send ^{├╝}
+Send ^{ü}
 return
 
 ^<+Capslock::
-Send ^{├╝}
+Send ^{ü}
 return
 
 ^<!Capslock::
-Send ^{├╝}
+Send ^{ü}
 return
 
 ; Notion navigation by mouse buttons

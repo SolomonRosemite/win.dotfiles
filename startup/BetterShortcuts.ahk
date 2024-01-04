@@ -113,7 +113,6 @@ Return
     Input, key, L1 T0.5 ; Wait for the second "g" within 0.5 seconds
     if (ErrorLevel = "Timeout")
     {
-        Send, g ; If timeout, send the first "g" normally
         return
     }
     
@@ -123,8 +122,6 @@ Return
     }
     else
     {
-        Send, g ; If not, send the first "g" normally
         Send, %key% ; Send the second key
     }
     return
-

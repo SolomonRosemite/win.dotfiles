@@ -108,6 +108,12 @@ Return
     Send, ^p ; Open print dialog
     return
 
+	
+#IfWinActive ahk_exe chrome.exe
+    ^+l::Send, ^{Tab} ; Ctrl+Shift+L to go forward a tab
+    ^+h::Send, ^+{Tab} ; Ctrl+Shift+H to go back a tab
+
+
 #IfWinActive ahk_exe chrome.exe
 ~g:: ; Go top of page
     Input, key, L1 T0.5 ; Wait for the second "g" within 0.5 seconds

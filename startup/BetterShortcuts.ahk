@@ -1,10 +1,8 @@
-Capslock::
-Send {LShift}{LCtrl}{F12}
-return
-
 ^Capslock::
 Send ^{ü}
 return
+
+*Capslock:: Escape
 
 <+Capslock::
 Send ^{ü}
@@ -107,27 +105,8 @@ Return
 ^+p::
     Send, ^p ; Open print dialog
     return
-
 	
 #IfWinActive ahk_exe chrome.exe
     ^+l::Send, ^{Tab} ; Ctrl+Shift+L to go forward a tab
     ^+h::Send, ^+{Tab} ; Ctrl+Shift+H to go back a tab
 
-
-#IfWinActive ahk_exe chrome.exe
-~g:: ; Go top of page
-    Input, key, L1 T0.5 ; Wait for the second "g" within 0.5 seconds
-    if (ErrorLevel = "Timeout")
-    {
-        return
-    }
-    
-    if (key = "g") ; If the second key is also "g"
-    {
-        Send, {Home} ; Send Home key
-    }
-    else
-    {
-        Send, %key% ; Send the second key
-    }
-    return

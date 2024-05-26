@@ -51,8 +51,8 @@ RAlt & v::Send, ^!+v
 
 ; ow & valorant ---------------------------------------------------------
 
-; overwatch stuff
-#IfWinActive, ahk_exe Overwatch.exe
+#IfWinActive ahk_exe Overwatch.exe or ahk_exe Valorant.exe
+
 ; Disable Alt+Tab
 !Tab::Return
 
@@ -62,14 +62,7 @@ RAlt & v::Send, ^!+v
 ; Disable Shift+Alt+Tab
 +!Tab::Return
 
-; valorant stuff
-#IfWinActive, ahk_exe Valorant.exe
-; Disable Alt+Tab
-!Tab::Return
+*Capslock:: Send, {Tab}
 
-; Disable Windows Key + Tab
-#Tab::Return
 
-; Disable Shift+Alt+Tab
-+!Tab::Return
 

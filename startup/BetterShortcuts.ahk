@@ -1,7 +1,3 @@
-^+M::
-Send, solomonezenwa.kanu-agha@marieeins.de
-return
-
 *Capslock:: Escape
 
 RAlt & q::Send, ^!+q

@@ -1,112 +1,75 @@
-^Capslock::
-Send ^{ü}
+^+M::
+Send, solomonezenwa.kanu-agha@marieeins.de
 return
 
 *Capslock:: Escape
 
-<+Capslock::
-Send ^{ü}
-return
+RAlt & q::Send, ^!+q
+RAlt & w::Send, ^!+w
+RAlt & e::Send, ^!+e
+RAlt & r::Send, ^!+r
 
-<!Capslock::
-Send ^{ü}
-return
+RAlt & a::Send, ^!+a
+RAlt & s::Send, ^!+s
+RAlt & d::Send, ^!+d
+RAlt & f::Send, ^!+f
 
-<!<+Capslock::
-Send ^{ü}
-return
+RAlt & y::Send, ^!+y
+RAlt & x::Send, ^!+x
+RAlt & c::Send, ^!+c
+RAlt & v::Send, ^!+v
 
-^<!<+Capslock::
-Send ^{ü}
-return
 
-^<+Capslock::
-Send ^{ü}
-return
+; spotify stuff ----------------------------------------------------------
+#IfWinActive ahk_exe Spotify.exe
+^h::
+    Send, {XButton1} ; Go back
+    return
 
-^<!Capslock::
-Send ^{ü}
-return
+^l::
+    Send, {XButton2} ; Go forward
+    return
 
-; Notion navigation by mouse buttons
-#IfWinActive, ahk_exe notion.exe
-XButton1::
-Send {CTRLDOWN}{vkDBsc01A}{CTRLUP}
-Return
+; chrome stuff -----------------------------------------------------------
 
-#IfWinActive, ahk_exe notion.exe
-XButton2::
-Send {CTRLDOWN}{vkDDsc01B}{CTRLUP}
-Return
-
-; Overwatch stuff
-#IfWinActive, ahk_exe Overwatch.exe
-; Disable Alt+Tab
-!Tab::Return
-
-#IfWinActive, ahk_exe Overwatch.exe
-; Disable Windows Key + Tab
-#Tab::Return
-
-; Valorant stuff
-#IfWinActive, ahk_exe Valorant.exe
-; Disable Alt+Tab
-!Tab::Return
-
-#IfWinActive, ahk_exe Valorant.exe
-; Disable Windows Key + Tab
-#Tab::Return
-
-#IfWinActive, ahk_exe VALORANT-Win64-Shipping.exe
-; Disable Alt+Tab
-!Tab::Return
-
-#IfWinActive, ahk_exe VALORANT-Win64-Shipping.exe
-; Disable Windows Key + Tab
-#Tab::Return
-
-; Chrome stuff
 #IfWinActive ahk_exe chrome.exe
 ^h::
     Send, {XButton1} ; Go back
     return
 
-#IfWinActive ahk_exe chrome.exe
 ^l::
     Send, {XButton2} ; Go forward
     return
 
-#IfWinActive ahk_exe chrome.exe
-^+k::
-    Send, {WheelUp 7} ; Scroll up
-    return
-
-#IfWinActive ahk_exe chrome.exe
-^+j::
-    Send, {WheelDown 7} ; Scroll down
-    return
-
-#IfWinActive ahk_exe chrome.exe
-^k::
-    Send, {WheelUp 3} ; Scroll up a little
-    return
-
-#IfWinActive ahk_exe chrome.exe
-^j::
-    Send, {WheelDown 3} ; Scroll down a little
-    return
-
-#IfWinActive ahk_exe chrome.exe
 ^p::
-    Send, !q ; QuicKey tab switcher
+    Send, ^y ; QuicKey tab switcher
     return
 
-#IfWinActive ahk_exe chrome.exe
 ^+p::
     Send, ^p ; Open print dialog
     return
-	
-#IfWinActive ahk_exe chrome.exe
-    ^+l::Send, ^{Tab} ; Ctrl+Shift+L to go forward a tab
-    ^+h::Send, ^+{Tab} ; Ctrl+Shift+H to go back a tab
+
+; ow & valorant ---------------------------------------------------------
+
+; overwatch stuff
+#IfWinActive, ahk_exe Overwatch.exe
+; Disable Alt+Tab
+!Tab::Return
+
+; Disable Windows Key + Tab
+#Tab::Return
+
+; Disable Shift+Alt+Tab
++!Tab::Return
+
+; valorant stuff
+#IfWinActive, ahk_exe Valorant.exe
+; Disable Alt+Tab
+!Tab::Return
+
+; Disable Windows Key + Tab
+#Tab::Return
+
+; Disable Shift+Alt+Tab
++!Tab::Return
 

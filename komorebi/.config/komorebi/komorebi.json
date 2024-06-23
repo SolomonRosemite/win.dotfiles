@@ -6,5 +6,8 @@
   "mouse_follows_focus": false,
   "border_width": 0,
   "default_workspace_padding": 0,
-  "default_container_padding": 0
+  "default_container_padding": 0,
+  "stackbar": {
+    "mode": "Never"
+  }
 }

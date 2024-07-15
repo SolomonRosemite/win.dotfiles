@@ -15,8 +15,7 @@ RAlt & x::Send, ^!+x
 RAlt & c::Send, ^!+c
 RAlt & v::Send, ^!+v
 
-
-; spotify stuff ----------------------------------------------------------
+; Spotify stuff ----------------------------------------------------------
 #IfWinActive ahk_exe Spotify.exe
 ^h::
     Send, {XButton1} ; Go back
@@ -45,10 +44,21 @@ RAlt & v::Send, ^!+v
     Send, ^p ; Open print dialog
     return
 
+; obsidian stuff -----------------------------------------------------------
+
+#IfWinActive ahk_exe Obsidian.exe
+^+l::
+    SendInput {WheelRight 10}
+    return
+
+^+h::
+    SendInput {WheelLeft 10}
+    return
+
 ; ow & valorant ---------------------------------------------------------
 
-#IfWinActive ahk_exe Overwatch.exe or ahk_exe Valorant.exe
-
+; Overwatch stuff
+#IfWinActive, ahk_exe Overwatch.exe
 ; Disable Alt+Tab
 !Tab::Return
 
@@ -58,7 +68,14 @@ RAlt & v::Send, ^!+v
 ; Disable Shift+Alt+Tab
 +!Tab::Return
 
-*Capslock:: Send, {Tab}
+; Valorant stuff
+#IfWinActive, ahk_exe Valorant.exe
+; Disable Alt+Tab
+!Tab::Return
 
+; Disable Windows Key + Tab
+#Tab::Return
 
+; Disable Shift+Alt+Tab
++!Tab::Return
 

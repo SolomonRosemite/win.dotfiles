@@ -17,6 +17,9 @@ RAlt & v::Send, ^!+v
 
 ; Spotify stuff ----------------------------------------------------------
 #IfWinActive ahk_exe Spotify.exe
+alt::
+    return ; disable alt
+
 ^h::
     Send, {XButton1} ; Go back
     return

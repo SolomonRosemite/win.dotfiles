@@ -1,10 +1,8 @@
 .shell powershell
 
 # Reload whkd configuration
-# alt + o                 : taskkill /f /im whkd.exe && start /b whkd # if shell is cmd
 alt + o                 : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
 alt + shift + o         : taskkill /f /im komorebi.exe; & "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\wm.vbs"
-# alt + shift + o         : komorebic reload-configuration
 
 
 # Focus windows

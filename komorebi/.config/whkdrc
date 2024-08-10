@@ -4,6 +4,15 @@
 alt + o                 : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
 alt + shift + o         : taskkill /f /im komorebi.exe; & "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\wm.vbs"
 
+# --- other stuff ---
+
+ctrl + alt + r          : wsl -e sh (wsl -e wslpath "$HOME\.win.dotfiles\scripts\win-terminal-background.sh") --rotate
+ctrl + alt + i          : wsl -e sh (wsl -e wslpath "$HOME\.win.dotfiles\scripts\win-terminal-background.sh") --increase-blur 10
+ctrl + alt + d          : wsl -e sh (wsl -e wslpath "$HOME\.win.dotfiles\scripts\win-terminal-background.sh") --decrease-blur 10
+ctrl + alt + b          : wsl -e sh (wsl -e wslpath "$HOME\.win.dotfiles\scripts\win-terminal-background.sh") --blur
+ctrl + alt + u          : wsl -e sh (wsl -e wslpath "$HOME\.win.dotfiles\scripts\win-terminal-background.sh") --unblur
+
+# --- komorebi config ---
 
 # Focus windows
 alt + h                 : komorebic focus left

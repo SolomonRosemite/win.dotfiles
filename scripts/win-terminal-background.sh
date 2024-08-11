@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
+set -o pipefail
 
 home_path=$(wslpath $(powershell.exe '$env:USERPROFILE' | tr -d '\r'))
 temp_dir="$home_path/AppData/Local/Temp"
@@ -56,7 +57,17 @@ fi
 
 if [[ $1 = "--rotate" ]]; then
     dirs=$(echo "$json_file" | jq '.profiles.defaults.sources[]' | xargs -I{} wslpath {})
-    new_random_image=$(find $dirs -type f 2>/dev/null | shuf -n 1 | xargs wslpath -w | tr "\\" "/" 2> /dev/null)
+    new_random_image=$(find "$dirs" -type f 2>/dev/null | shuf -n 1 | xargs wslpath -w | tr "\\" "/" 2> /dev/null)
+
+    opacity=$(echo "$json_file" | jq -r '.profiles.defaults.backgroundImageOpacityWithoutBlur')
+    new_json=$(echo "$json_file" | jq ".profiles.defaults.backgroundImage = \"$new_random_image\" | .profiles.defaults.backgroundImageOriginal = \"$new_random_image\" | .profiles.defaults.backgroundImageOpacity = $opacity")
+    echo "$new_json" > "$win_terminal_settings"
+    exit 0
+fi
+
+if [[ $1 = "--select" ]]; then
+    dirs=$(echo "$json_file" | jq '.profiles.defaults.sources[]' | xargs -I{} wslpath {})
+    new_random_image=$(find "$dirs" -type f 2>/dev/null | fzf | xargs wslpath -w | tr "\\" "/" 2> /dev/null)
 
     opacity=$(echo "$json_file" | jq -r '.profiles.defaults.backgroundImageOpacityWithoutBlur')
     new_json=$(echo "$json_file" | jq ".profiles.defaults.backgroundImage = \"$new_random_image\" | .profiles.defaults.backgroundImageOriginal = \"$new_random_image\" | .profiles.defaults.backgroundImageOpacity = $opacity")

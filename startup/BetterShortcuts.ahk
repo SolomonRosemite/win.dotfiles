@@ -15,6 +15,49 @@ RAlt & x::Send, ^!+x
 RAlt & c::Send, ^!+c
 RAlt & v::Send, ^!+v
 
+; Terminal stuff ----------------------------------------------------------
+#IfWinActive ahk_exe WindowsTerminal.exe
+
+; zellij does not support multiple modifier keys - see issue and workaround: https://github.com/zellij-org/zellij/issues/735#issuecomment-1973177193
+; https://r12a.github.io/app-conversion/
+RAlt & q::Send, {U+E107}     ; ()
+RAlt & w::Send, {U+E108}     ; ()
+RAlt & e::Send, {U+E109}     ; ()
+RAlt & r::Send, {U+E10A}     ; ()
+
+RAlt & a::Send, {U+E10B}     ; ()
+RAlt & s::Send, {U+E10C}     ; ()
+RAlt & d::Send, {U+E10D}     ; ()
+RAlt & f::Send, {U+E10E}     ; ()
+
+RAlt & y::Send, {U+E10F}     ; ()
+RAlt & x::Send, {U+E110}     ; ()
+RAlt & c::Send, {U+E111}     ; ()
+RAlt & v::Send, {U+E112}     ; ()
+
+RAlt & n::Send, {U+E114}     ; ()
+RAlt & o::Send, {U+E115}     ; ()
+RAlt & p::Send, {U+E116}     ; ()
+RAlt & SC027::Send, {U+E100} ; ()
+
+RAlt & h::
+GetKeyState,isShiftDown,Shift,P
+IfEqual,isShiftDown,D
+    Send {U+E122} ; ()
+else
+    Send {U+E120} ; ()
+return
+
+RAlt & l::
+GetKeyState,isShiftDown,Shift,P
+IfEqual,isShiftDown,D
+    Send {U+E123} ; ()
+else
+    Send {U+E121} ; ()
+return
+
+; this is insane
+
 ; Spotify stuff ----------------------------------------------------------
 #IfWinActive ahk_exe Spotify.exe
 alt::

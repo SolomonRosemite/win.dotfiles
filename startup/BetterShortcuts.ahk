@@ -17,6 +17,14 @@ RAlt & v::Send, ^!+v
 
 ; Terminal stuff ----------------------------------------------------------
 #IfWinActive ahk_exe WindowsTerminal.exe
+; nvim
+< & j::
+Send ^d
+return
+
+< & k::
+Send ^u
+return
 
 ; zellij does not support multiple modifier keys - see issue and workaround: https://github.com/zellij-org/zellij/issues/735#issuecomment-1973177193
 ; https://r12a.github.io/app-conversion/
@@ -74,6 +82,9 @@ alt::
 ; chrome stuff -----------------------------------------------------------
 
 #IfWinActive ahk_exe chrome.exe
+alt::
+    return ; disable alt
+
 ^h::
     Send, {XButton1} ; Go back
     return

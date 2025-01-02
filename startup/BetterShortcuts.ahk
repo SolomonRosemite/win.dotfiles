@@ -15,14 +15,41 @@ RAlt & x::Send, ^!+x
 RAlt & c::Send, ^!+c
 RAlt & v::Send, ^!+v
 
-; Terminal stuff ----------------------------------------------------------
-#IfWinActive ahk_exe WindowsTerminal.exe
-; nvim
+; nvim, less, cat etc.
 <::Send, <
 +<::Send, >
 < & j::Send, ^d
 < & k::Send, ^u
 
+; remap < to ctrl
+< & a::Send, ^a
+< & b::Send, ^b
+< & c::Send, ^c
+< & d::Send, ^d
+< & e::Send, ^e
+< & f::Send, ^f
+< & g::Send, ^g
+< & h::Send, ^h
+< & i::Send, ^i
+< & l::Send, ^l
+< & m::Send, ^m
+< & n::Send, ^n
+< & o::Send, ^o
+< & p::Send, ^p
+< & q::Send, ^q
+< & r::Send, ^r
+< & s::Send, ^s
+< & t::Send, ^t
+< & u::Send, ^u
+< & v::Send, ^v
+< & w::Send, ^w
+< & x::Send, ^x
+< & y::Send, ^y
+< & z::Send, ^z
+
+
+; Terminal stuff ----------------------------------------------------------
+#IfWinActive ahk_exe WindowsTerminal.exe
 ; zellij does not support multiple modifier keys - see issue and workaround: https://github.com/zellij-org/zellij/issues/735#issuecomment-1973177193
 ; https://r12a.github.io/app-conversion/
 RAlt & q::Send, {U+E107}     ; ()
@@ -90,9 +117,9 @@ alt::
     Send, {XButton2} ; Go forward
     return
 
-^p::
-    Send, ^y ; QuicKey tab switcher
-    return
+; QuicKey tab switcher
+< & p::Send, ^y
+^p::Send, ^y
 
 ^+p::
     Send, ^p ; Open print dialog
